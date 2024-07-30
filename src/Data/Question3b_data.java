@@ -30,6 +30,10 @@ public class Question3b_data {
                 linkedList[size - 1].linked = null;
         }
     }
+    
+    public int getSize() {
+        return size;
+    }
 
     public void swapI(int a, int b) {
         int temp = 0;

@@ -1,39 +1,25 @@
 package Main;
 
-import java.util.Scanner;
 import Data.Question3b_data;
 
 public class Question3b_main {
 
-    private static Scanner sc = new Scanner(System.in);
-    private static Question3b_data linkedList[];
+    private static Question3b_data a = new Question3b_data(0);
+    private static Question3b_data listA[];
 
     public static void main(String[] args) {
-        input_list();
+        a.input_list();
+        listA = a.linkedList;
+        a.sort_ascending(listA);
+        outputList();
+        a.sort_descending(listA);
     }
 
-    public static void input_list(){
-        
-        int size = sc.nextInt();
-        linkedList = new  Question3b_data[size];
-        
-        for(int i = 0; i < size; i++){
-            linkedList[i] = new Question3b_data(sc.nextInt());
+    public static void outputList() {
+        for (int i = 0; i < a.size - 1; i++) {
+            System.out.printf("%d ", listA[i].n);
+
         }
-        for(int i = size - 1; i >= 0; i--){
-            if(i < size - 1)
-                linkedList[i].linked = linkedList[i + 1];
-            else
-                linkedList[size - 1].linked = null;
-        }
-        
     }
 
-    public static void sort_ascending(){
-
-    }
-
-    public static void sort_descending(){
-        
-    }
 }
