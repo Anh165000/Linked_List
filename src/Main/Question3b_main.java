@@ -27,16 +27,6 @@ public class Question3b_main {
                 linkedList[size - 1].linked = null;
         }
         
-        // for(int i = 0; i < size; i++){
-        //     System.out.printf("%d ", linkedList[i].n);
-        // }
-
-        // for(int i = 0; i < size; i++){
-        //     if(linkedList[i].linked != null)
-        //         System.out.println(linkedList[i].linked);
-        //     else
-        //         System.out.printf("%s", "null");
-        // }
     }
 
     public static void sort_ascending(){
