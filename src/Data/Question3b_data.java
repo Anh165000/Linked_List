@@ -31,7 +31,14 @@ public class Question3b_data {
         }
     }
 
-    public void swap(Question3b_data a, Question3b_data b) {
+    public void swapI(int a, int b) {
+        int temp = 0;
+        temp = a;
+        a = b;
+        b = temp;
+    }
+
+    public void swapL(Question3b_data a, Question3b_data b) {
         Question3b_data temp = null;
         temp = a;
         a = b;
@@ -42,17 +49,26 @@ public class Question3b_data {
 
         for(int i = 0; i < size - 2; i++){
             for(int j = i + 1; j < size - 1; j++){
-                if(linkedList[i].n > linkedList[j].n ){
-                    swap(linkedList[i], linkedList[j]);
+                if(linkedList[i].n > linkedList[j].n){
+                    swapL(linkedList[i].linked, linkedList[j].linked);
+                    swapI(linkedList[i].n, linkedList[j].n);
                 }
-
             }
         }
 
     }
 
+
     public void sort_descending(Question3b_data linkedList[]) {
 
+        for(int i = 0; i < size - 2; i++){
+            for(int j = i + 1; j < size - 1; j++){
+                if(linkedList[i].n < linkedList[j].n){
+                    swapL(linkedList[i].linked, linkedList[j].linked);
+                    swapI(linkedList[i].n, linkedList[j].n);
+                }
+            }
+        }
     }
 
 }
