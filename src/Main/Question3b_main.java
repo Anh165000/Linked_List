@@ -12,13 +12,16 @@ public class Question3b_main {
         listA = a.linkedList;
         a.sort_ascending(listA);
         outputList();
+        System.out.println("\n");
         a.sort_descending(listA);
+        outputList();
     }
 
     public static void outputList() {
-        for (int i = 0; i < a.size - 1; i++) {
-            System.out.printf("%d ", listA[i].n);
-
+        for (int i = 0; i < a.size; i++) {
+            System.out.printf("n:%d ", listA[i].n);
+            System.out.printf("p:%s ", listA[i].linked);
+            
         }
     }
 

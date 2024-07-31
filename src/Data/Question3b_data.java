@@ -50,7 +50,6 @@ public class Question3b_data {
     }
 
     public void sort_ascending(Question3b_data linkedList[]){
-
         for(int i = 0; i < size - 2; i++){
             for(int j = i + 1; j < size - 1; j++){
                 if(linkedList[i].n > linkedList[j].n){
@@ -59,7 +58,6 @@ public class Question3b_data {
                 }
             }
         }
-
     }
 
 
